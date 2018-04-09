@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/sign.css">
+
+  <script src="../static/js/jquery-3.2.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>   
+  <script src="../static/js/cookie.js"></script>
+  <script src="../static/js/sign_up.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-signin">
+      <div class="header">
+        <div class="text-center">
+          <a href="http://47.95.205.76/"><img src="../static/img/icon.png"></a>
+        </div>
+        <p class="form-signin-heading">Join Library today</p>
+      </div>
+      <form>
+        <div class="login-wrap">
+          <input type="text" class="form-control" placeholder="Pick a User ID" autofocus="autofocus" required>
+          <input type="password" class="form-control" placeholder="Your Password" id="password" onchange=validatePassword() 
+          required pattern="^[a-zA-Z0-9]{8,16}$" title="8-16 digits. Must be numbers or letters">
+          <div id="confirm">
+            <input type="password" class="form-control" placeholder="Confirm Password" id="confirm_password" onkeyup=validatePassword() required>
+          </div>
+          <input type="text" class="form-control" placeholder="E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"> 
+          <input type="text" class="form-control" placeholder="Name" required>
+          <label class="checkbox">
+              <span class="pull-right"> <a href="http://47.95.205.76/login">Have an account? Login</a></span>
+          </label>
+          <button class="btn btn-lg btn-login btn-block" type="submit">sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

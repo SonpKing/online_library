@@ -1,0 +1,90 @@
+body {
+    color: #797979;
+    background: #e7e7e7;
+    font-family: 'Open Sans', sans-serif!important;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 13px;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.form-signin {
+    max-width: 330px;
+    margin: 100px auto 0;
+    padding-top:15px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.form-signin-heading {
+    margin: 0;
+    text-align: center;
+}
+.login-wrap {
+    padding: 20px;
+}
+.login-wrap input,button,span{
+    font-family: 'Open Sans', sans-serif;
+}
+.form-signin input[type="text"], .form-signin input[type="password"] {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #eaeaea;
+    box-shadow: none;
+    font-size: 12px;
+}
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+    color: #b6b6b6;
+    display: block;
+    margin: 10px 5px 14px 0;
+    line-height:20px;
+    height: 20px; 
+}
+
+.btn-login{
+    background: #f67a6e;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.btn-loginAdmin{
+    background: #99c262;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+.text-center img{
+    height: 25px;
+    margin-bottom: 2px;
+}
+.header {
+    font-size: 18px;
+    text-align: center;
+}
+
+input.form-control:focus{  
+    border-color: eaeaea;
+    box-shadow:0 0 3px #b6b6b6;
+}
+

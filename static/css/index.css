@@ -1,0 +1,97 @@
+body{
+	color: #797979;
+	background-image: url( "../img/background.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif!important;
+	font-size:13px;
+}
+
+#user-id{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: bolder;
+	font-size: 14px;
+	color: #777777;
+}
+
+#bell-icon{
+	cursor: pointer;
+	margin: 15px;
+}
+
+ul.navbar-right{
+	margin-right: 0;
+}
+
+ul>li img{
+	height: 1.8em;
+}
+
+ul.navbar-right>li,ul.navbar-right>li>a{
+	border-radius: 50%;
+	margin-right: 0.5em;
+}
+
+/*ul.navbar-right a:hover{
+	background-color: #f5b18c;
+}*/
+ul.navbar-right a:focus,ul.navbar-right a:active,ul.navbar-right a :active:focus{
+outline: none;
+box-shadow: none;
+background-color:transition;
+}
+
+#library{
+	text-align: center;
+	padding-top: 200px;
+}
+
+#div_select{
+	text-align: center;
+	padding-top:20px;
+}
+#library img{
+	width: 300px;
+}
+
+#div_select form>*{
+	display: inline-block;
+}
+
+input.form-control{
+	width:350px;    
+	box-shadow: none;
+	border-radius: 5px;
+	font-size: 20px;
+}
+select.form-control{
+	width: 110px;
+}
+
+form>*{
+	margin: 1em;
+	height: 2em;
+}
+
+
+.form-control:focus,.form-control:active:focus {
+	box-shadow: none;
+	border-color: eaeaea;
+	box-shadow: 0 0 3px #b6b6b6;
+	outline: none;
+}
+
+#search-btn{
+	height: 2em;
+	width: 2em;
+	vertical-align: middle;
+	background-image: url("../img/search_light.png");
+	background-size: 2em,2em;
+}
+
+#search-btn:hover,#search-btn:focus{
+	background-image: url("../img/search.png");
+}
+

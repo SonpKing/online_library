@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Admin's Home</title>
+	<meta charset="utf-8">
+	<!-- Online resource -->
+	<!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../static/css/AdminIndex.css" rel="stylesheet" type="text/css" >
+		<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="../static/js/cookie.js"></script>
+	  	<script src="../static/js/AdminIndex.js"></script>
+	  	<script src="../static/js/JsBarcode.all.min.js"></script> -->
+
+	<!-- Local resource -->
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../static/css/AdminIndex.css">
+	<link rel="stylesheet" href="../static/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../static/css/bootstrap-select.min.css">
+	<script src="../static/js/jquery-3.2.1.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/cookie.js"></script>
+	<script src="../static/js/AdminIndex.js"></script>
+	<script src="../static/js/JsBarcode.all.min.js"></script>
+
+	<link rel="stylesheet" href="../static/css/chart.css">
+	<script type="text/javascript" src="../static/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="../static/js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="../static/js/bootstrap-select.min.js"></script>
+	<script src="../static/js/Chart.min.js"></script>
+	<script type="text/javascript" src="../static/js/chart.js"></script>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div id="header" class="row clearfix">
+			<div class="col-md-12 column">
+				<nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+					<div class="navbar-header">
+						<a class="navbar-left" href="http://47.95.205.76">
+							<img src="../static/img/icon.png" style="height: 2em; margin-top: 1.1em;margin-left: 2em;">
+						</a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="height: 4.5em">
+						<ul id='right_nav' class="nav navbar-nav navbar-right">
+							<li id="userid">
+								<a href="#">
+									<span id="user_id"></span>
+								</a>
+							</li>
+							<li id="signout">
+								<a href="#">
+									<img src="../static/img/logout.png" style="height: 2em;">
+									<span style="margin-left: 0.5em;">Sign Out</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="row" id="bodyContent">
+			<aside>
+				<div id="sidebar" class="nav-collapse" style="position: fixed;width: 13%">
+					<!-- sidebar menu start-->
+					<ul class="sidebar-menu">
+						<li class="active">
+							<a id="borrow_books" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/22.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Borrow Books</span>
+							</a>
+						</li>
+						<li>
+							<a id="return_books" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/22.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Return Books</span>
+							</a>
+						</li>
+						<li>
+							<a id="renew_books" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/22.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Renew Books</span>
+							</a>
+						</li>
+						<li>
+							<a id="add_books" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/21.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Add Books</span>
+							</a>
+						</li>
+						<li>
+							<a id="edit_books" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/21.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Edit Books</span>
+							</a>
+						</li>
+						<li>
+							<a id="delete_books" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/21.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">View/Del Books</span>
+							</a>
+						</li>
+						<li>
+							<a id="reader_records" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/23.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">View Reader Records</span>
+							</a>
+						</li>
+						<li>
+							<a id="reader_register" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/23.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Register Account</span>
+							</a>
+						</li>
+						<li>
+							<a id="remove_account" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/23.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Remove Account</span>
+							</a>
+						</li>
+						<li>
+							<a id="penalty_rules" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/23.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Edit Charging Rules</span>
+							</a>
+						</li>
+						<li>
+							<a id="income_records" class="open_detail" href="javascript:">
+								<i class="icon-dashboard"></i>
+								<img src="../static/img/23.png" style="height: 1.5em">
+								<span style="margin-left: 0.5em;">Income Report</span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</aside>
+			<div style="margin-left: 13%;width: 87%;position: fixed;bottom: 0em;top: 4.5em;overflow-y: auto;">
+				<div id="borrow_books_detail" class="detail">
+					<h3>Borrow Books</h3>
+					<div class="form-group">
+						<label for="InputISBN"></label>
+						<input type="text" autofocus="autofocus" class="form-control" id="InputBookId" placeholder="Book ID" onkeyup="value=value.replace(/[^0-9]/ig,'')"
+						 maxlength="16">
+					</div>
+					<div class="form-group" style="margin-top: 1em;">
+						<label for="InputUserID"></label>
+						<input type="text" class="form-control" id="InputUserId" placeholder="User ID" onkeyup="value=value.replace(/[^0-9]/ig,'')"
+						 maxlength="11">
+					</div>
+					<button id="borrow_submit" type="submit" class="btn btn-primary">Submit</button>
+				</div>
+
+				<div id="return_books_detail" class="detail">
+					<h3>Return Books</h3>
+					<div class="form-group">
+						<label for="InputISBN"></label>
+						<input type="text" autofocus="autofocus" class="form-control" id="InputBookId" placeholder="Book ID" onkeyup="value=value.replace(/[^0-9]/ig,'')"
+						 maxlength="16">
+					</div>
+					<div id="condition_checkbox">
+						<span>Book Condition: </span>
+						<input type="radio" name="condition" checked="checked" value="0">Good
+						<input type="radio" name="condition" value="1">Damaged
+						<input type="radio" name="condition" value="2">Lost
+					</div>
+					<button id="return_submit" type="submit" class="btn btn-primary">Submit</button>
+				</div>
+
+				<div id="renew_books_detail" class="detail">
+					<h3>Renew Books</h3>
+					<div class="form-group">
+						<label for="InputBookId"></label>
+						<input type="text" autofocus="autofocus" class="form-control" id="InputBookId" placeholder="Book ID" onkeyup="value=value.replace(/[^0-9]/ig,'')"
+						 maxlength="16">
+					</div>
+					<button id="renew_submit" type="submit" class="btn btn-primary">Submit</button>
+				</div>
+
+				<div id="add_books_detail" class="detail">
+					<h3>Add Books</h3>
+					<div class="form-group">
+						<input type="text" autofocus="autofocus" class="form-control" id="InputISBN" placeholder="ISBN" onkeyup="value=value.replace(/[^0-9]/ig,'')"
+						 maxlength="13">
+						<p style="margin-right: 0px;">A valid ISBN contains 13 digits</p>
+						<div style="margin-top: 2em;">
+							<table class="table" style="width: 60%;float: left;">
+								<thead>
+									<tr>
+										<th>Quantity</th>
+										<th>Building</th>
+										<th>Room</th>
+										<th>Shelf</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<select id="select_quantity" style="font-size: 1.5em;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+											</select>
+										</td>
+										<td>
+											<select id="select_library" style="font-size: 1.5em;">
+												<option value="A">A</option>
+												<option value="B">B</option>
+												<option value="C">C</option>
+											</select>
+										</td>
+										<td>
+											<select id="select_room" style="font-size: 1.5em;">
+												<option value="101">101</option>
+												<option value="102">102</option>
+												<option value="103">103</option>
+												<option value="104">104</option>
+												<option value="201">201</option>
+												<option value="202">202</option>
+												<option value="203">203</option>
+												<option value="204">204</option>
+												<option value="301">301</option>
+												<option value="302">302</option>
+												<option value="303">303</option>
+												<option value="304">304</option>
+											</select>
+										</td>
+										<td>
+											<select id="select_shelf" style="font-size: 1.5em;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="1">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button id="add_submit" type="submit" class="btn btn-primary" disabled="true" style="margin-top: 1.5em;">Submit</button>
+						</div>
+					</div>
+
+					<div id="book_detail" style="background-color: white;width: 100%;margin:0 auto;margin-top:5em;display: none;">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td>
+										<img src="">
+									</td>
+									<td>
+										<p id="title"></p>
+										<p id="author"></p>
+										<p id="publisher"></p>
+										<p id="pubdate"></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="barcode" style="display: none;margin-top: 0em;margin-left: -4em;">
+						<h3>Add <span id="add_book_title"></span> Succeeded!</h3>
+						<table class="table">
+							<tbody>
+								<tr>
+									<td>
+										<img id="img0"></img>
+									</td>
+									<td>
+										<img id="img1"></img>
+									</td>
+									<td>
+										<img id="img2"></img>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img id="img3"></img>
+									</td>
+									<td>
+										<img id="img4"></img>
+									</td>
+									<td>
+										<img id="img5"></img>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img id="img6"></img>
+									</td>
+									<td>
+										<img id="img7"></img>
+									</td>
+									<td>
+										<img id="img8"></img>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div id="edit_books_detail" class="detail">
+					<h3>Edit Books</h3>
+					<div class="form-group">
+						<input type="text" autofocus="autofocus" class="form-control" id="InputBookId" placeholder="Book ID" onkeyup="value=value.replace(/[^0-9]/ig,'')"
+						 maxlength="16">
+						<p style="margin-right: 0px;">Please input a valid Book ID</p>
+						<div style="margin-top: 2em">
+							<table class="table" style="width: 40%;float:left;margin-left:10%;">
+								<thead>
+									<tr>
+										<th>Building</th>
+										<th>Room</th>
+										<th>Shelf</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<select id="select_library" style="font-size: 1.5em;">
+												<option value="A">A</option>
+												<option value="B">B</option>
+												<option value="C">C</option>
+											</select>
+										</td>
+										<td>
+											<select id="select_room" style="font-size: 1.5em;">
+												<option value="101">101</option>
+												<option value="102">102</option>
+												<option value="103">103</option>
+												<option value="104">104</option>
+												<option value="201">201</option>
+												<option value="202">202</option>
+												<option value="203">203</option>
+												<option value="204">204</option>
+												<option value="301">301</option>
+												<option value="302">302</option>
+												<option value="303">303</option>
+												<option value="304">304</option>
+											</select>
+										</td>
+										<td>
+											<select id="select_shelf" style="font-size: 1.5em;">
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="1">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<button id="edit_books_submit" type="submit" class="btn btn-primary" style="margin-top: 1.5em;">Confirm</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="delete_books_detail" class="detail" style="width: 900px;">
+					<h3>View/Delete Books</h3>
+					<div class="form-group" style="width: 55%;margin: 0 auto;padding-right: 0px;">
+						<label for="InputISB"></label>
+						<input type="text" autofocus="autofocus" class="form-control" id="InputISBN" placeholder="ISBN" style="width: 400px;float: left;"
+						 onkeyup="value=value.replace(/[^0-9]/ig,'')" maxlength="13">
+						<button type="submit" class="check btn btn-primary">Check</button>
+					</div>
+
+					<table class="table" style="margin: 0 auto;margin-top: 3em;width: 55%;">
+						<tbody>
+							<tr>
+								<td class="image">
+									<img src="" style="width: 5em;">
+								</td>
+								<td class="book_info" style="width:80%">
+									<ul>
+										<li>
+											<span class="title"></span>
+										</li>
+										<li style="margin-top: 1em;">
+											<span id="other_info"></span>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<table id="booklist" class="table table-striped" style="margin-top: 2em;">
+
+					</table>
+				</div>
+
+				<div id="reader_records_detail" class="detail" style="width: 900px;">
+					<h3>View Reader Records</h3>
+					<div class="form-group" style="width: 55%;margin: 0 auto;padding-right: 0px;">
+						<input type="text" autofocus="autofocus" class="form-control" id="reader_id" placeholder="Reader ID" style="width: 400px;float: left;"
+						 onkeyup="value=value.replace(/[^0-9]/ig,'')" maxlength="11">
+						<button type="submit" class="check btn btn-primary">Check</button>
+					</div>
+					<div id="records" style="background-color: white;display: none;margin-top: 3em;">
+						<table class="table" style="margin: 0 auto;">
+							<thead>
+								<tr>
+									<th>Book ID</th>
+									<th>ISBN</th>
+									<th>Borrow Time</th>
+									<th>Due Time</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr id="row_0" style="display: none;">
+									<td id="book_id_0">#</td>
+									<td id="book_isbn_0">#</td>
+									<td id="book_borrowtime_0">#</td>
+									<td id="book_duetime_0">#</td>
+								</tr>
+								<tr id="row_1" style="display: none;">
+									<td id="book_id_1">#</td>
+									<td id="book_isbn_1">#</td>
+									<td id="book_borrowtime_1">#</td>
+									<td id="book_duetime_1">#</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					
+				</div>
+
+				<div id="reader_register_detail" class="detail">
+					<h3>Reader Register</h3>
+					<form id="register_submit">
+						<div class="login-wrap" style="text-align: left;">
+							<label>Reader ID</label>
+							<input type="text" autofocus="autofocus" class="form-control" id="reader_id" placeholder="Reader ID" required pattern="^[0-9]{11,11}$" maxlength="11">
+							<p>Must be 11 digits. Must be numbers</p>
+							<label>Reader Name</label>
+							<input type="text" class="form-control" id="name" placeholder="Reader Name" required pattern="^[\w]{1,10}$" maxlength="10">
+							<p>No more than 10 characters</p>
+							<label>Password</label>
+							<input type="password" class="form-control" id="psw" value="123456" required pattern="^[a-zA-Z0-9]{6,16}$" maxlength="16">
+							<p>Default Password is 123456. Must be letters or numbers. 6 to 16 digits</p>
+							<button type="submit" class="btn btn-primary" style="width: 50%;margin-left: 25%;margin-top: 2em">Register</button>
+							<div style="margin-top: 2em;margin-bottom: 2em;">
+								<table class="table table-hover table-responsive table-striped">
+									<caption style="text-align: center">Charging Rules</caption>
+									<thead>
+										<tr>
+											<th>Type</th>
+											<th>Value</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Overdue Fine (per day)</td>
+											<td><span id="overdue"></span></td>
+										</tr>
+										<tr>
+											<td>Additional Fine on Damage (per book)</td>
+											<td><span id="damage"></span></td>
+										</tr>
+										<tr>
+											<td>Additional Fine on Lost (per book)</td>
+											<td><span id="lost"></span></td>
+										</tr>
+										<tr>
+											<td>Deposit</td>
+											<td><span id="deposit"></span></td>
+										</tr>
+									</tbody>
+								</table>
+								<h4>Other Details</h4>
+								<p>1. Overdue Fine = Overdue Fine(per day) * Overdue Days.</p>
+								<p>2. If the book is damaged/lost, Total Fine is calculated as the sum of the book's price and Additional Fine.</p>
+								<p>3. If the book is damaged/lost, Overdue Fine and Additional Fine are both involved if apply.</p>
+								<p>4. The Deposit can only be returned when his/her account is removed from the system.</p>
+								<p>5. A reader must clear all his/her borrowing records before removing account.</p>
+								<p>6. Librarian reserves the right to edit and explain the charging rules.</p>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div id="remove_account_detail" class="detail">
+					<h3>Remove Account</h3>
+					<form id="remove_account_submit">
+						<div class="login-wrap" style="text-align: left;">
+							<label>Reader ID</label>
+							<input type="text" autofocus="autofocus" class="form-control" id="reader_id" placeholder="Reader ID" required pattern="^[0-9]{11,11}$"
+							 maxlength="11">
+							<div id="remove_notice" style="text-align: center;display: none;background-color: white;padding: 2em;margin-top: 2em;">
+								<h4>Check Reader Information</h3>
+									<h4>Reader's Name:
+										<strong id="reader_name"></strong>
+									</h4>
+									<h4>Return Deposit:
+										<strong id="return_deposit"></strong>
+									</h4>
+							</div>
+							<button type="submit" class="btn btn-danger" style="width: 50%;margin-left: 25%">Remove</button>
+						</div>
+					</form>
+				</div>
+
+				<div id="penalty_rules_detail" class="detail">
+					<h3>Edit Charging Rules</h3>
+					<form id="penalty_rules_submit">
+						<div class="login-wrap" style="text-align: left;">
+							<label>Overdue Fine(per day)</label>
+							<input type="text" autofocus="autofocus" class="form-control" id="overdue" placeholder="Overdue Fine(per day)" required pattern="^[0-9]{1,5}$"
+							 maxlength="10">
+							<label style="margin-top: 1em;">Additional Fine on Damage(per book)</label>
+							<input type="text" autofocus="autofocus" class="form-control" id="damage" placeholder="Damage Fine(per book)" required pattern="^[0-9]{1,5}$"
+							 maxlength="10">
+							<label style="margin-top: 1em;">Additional Fine on Lost(per book)</label>
+							<input type="text" autofocus="autofocus" class="form-control" id="lost" placeholder="Lost Fine(per book)" required pattern="^[0-9]{1,5}$"
+							 maxlength="10">
+							 <label style="margin-top: 1em;">Deposit</label>
+							<input type="text" autofocus="autofocus" class="form-control" id="deposit" placeholder="Deposit" required pattern="^[0-9]{1,5}$"
+							 maxlength="10">
+							<button type="submit" class="btn btn-primary" style="width: 50%;margin-left: 25%">Confirm</button>
+						</div>
+					</form>
+				</div>
+
+				<!-- Jiaming's code here -->
+				<div id="income_records_detail" class="detail">
+
+					<h3>
+						Expenses and Receipts
+					</h3>
+
+
+					<div id="JmChartContent" class="ChartContent clearfix ">
+
+						<div id="JMSelect" class="select-group ">
+							<div>
+								<select id="ShowType" name="ShowType" class="selectpicker show-tick form-control" data-live-search="false" onchange="selectOnchang(this)">
+									<option value="0">Day</option>
+									<option value="1">Month</option>
+									<option value="2">Year</option>
+								</select>
+							</div>
+
+						</div>
+
+						<div id="JMchartFrom" class="form-group">
+							<div class="input-group date form_date" data-date="" data-date-format="yyyy-MM-dd">
+								<input id="chartDatetimepicker" class="form-control" size="16" type="text" value="" readonly>
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+
+							</div>
+
+						</div>
+
+						<div id="JMcahrtBtn" class="chartBtn">
+							<button type="button" class="btn btn-info" onclick="getData(this)">Show Chart</button>
+						</div>
+
+					</div>
+					<div id= "JMrow" class="row">
+						<div id="pieChart" class="column col-md-8">
+							<canvas id="pie"></canvas>
+						</div>
+
+
+						<div id="chartTable" style="display:none" class="column col-md-4">
+							<table class="table table-hover table-responsive table-striped">
+								<caption id="tableCaption" style="text-align: center">Details</caption>
+								<thead>
+									<tr>
+										<th>Type</th>
+										<th>Value</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Due</td>
+										<td id="tableDue"></td>
+									</tr>
+
+									<tr>
+										<td>Damage</td>
+										<td id="tableDamage"></td>
+									</tr>
+
+									<tr>
+										<td>Lost</td>
+										<td id="tableLost"></td>
+									</tr>
+
+									<tr>
+										<td>Deposit</td>
+										<td id="tableDeposit"></td>
+									</tr>
+
+									<tr>
+										<td>Refund</td>
+										<td id="tableReturnDeposit"></td>
+									</tr>
+
+									<tr>
+										<td>Total</td>
+										<td id="tableTotal"></td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="linerChart">
+						<canvas id="liner"></canvas>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel">
+						Important Notice
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div id="fine_info" style="padding:1em;">
+						<h4>Fine Detail</h2>
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Item (If applies)</th>
+										<th>Fine (RMB)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Overdue</td>
+										<td>
+											<strong></strong id="overdue_fine">
+										</td>
+									</tr>
+									<tr>
+										<td>Damage</td>
+										<td>
+											<strong id="damage_fine"></strong>
+										</td>
+									</tr>
+									<tr>
+										<td>Lost</td>
+										<td>
+											<strong id="lost_fine"></strong>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<strong>Total</strong>
+										</td>
+										<td>
+											<font size="5">
+												<strong id="total_fine"></strong>
+											</font>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<h5>
+								<font color="red">Please make sure that all fines are paid before SUBMIT</font>
+							</h5>
+							<h5>
+								<font color="red">If book is Damaged or Lost, SUBMIT will delete this book</h5>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default" id="go_back" data-dismiss="modal">
+						Cancel
+					</button>
+					<button class="btn btn-danger" id="go_on" data-dismiss="modal">
+						Submit
+					</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal -->
+	</div>
+</body>
+
+</html>

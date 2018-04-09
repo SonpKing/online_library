@@ -1,0 +1,78 @@
+body{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+.btn:focus,.btn:active:focus {   
+    border: none;
+    outline: none;   
+    box-shadow:none;
+}
+
+.checkbox, .checkbox:hover, .checkbox:focus {
+    border: none;
+}
+
+.sdialog {
+    position: fixed;
+    width: 100%;
+    max-width: 300px;
+    height: 100px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    text-align: center;
+    font-size: 15px;
+    display: none;
+    z-index: 1024;
+}
+
+.sdialog-body {
+    height:70%;
+}
+
+.sdialog-content{   
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sdialog-footer{
+    height: 30%;
+}
+.sdialog-footer button{
+    margin:auto;
+}
+
+.sdialog .btn-dialog{
+    border: 1px solid transparent;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0ad4e;
+    color: white;
+    outline: none;
+}
+
+.sdialog .btn-dialog:hover{
+    color: #333;
+}
+
+.sdialog .btn-dialog:active{
+    color: #333;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}

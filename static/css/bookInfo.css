@@ -1,0 +1,189 @@
+body {
+    color: #797979;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px !important;
+	margin: 0px !important;
+	font-size: 13px !important;
+}
+
+#username{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: bolder;
+	font-size: 14px;
+}
+.navbar-default{
+	border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand img{
+	width: 7em;
+	cursor: pointer;
+}
+
+.dropdown-menu {
+    border: none;
+    border-top: 3px solid #595959;
+}
+
+ul>li img{
+	height:20px;
+	width: 20px;
+}
+
+#signin>a{
+	height: 50px;
+}
+
+li{
+	list-style-type: none;
+}
+
+#bg_img{
+	position: relative;
+	background-color: #F1F2F7;
+	width:100%;
+	height:100%;
+}
+
+#second_row{
+	position: relative;
+	margin: auto;
+	width: 100%;
+}
+
+#second_row>div>div{
+	margin-bottom: 20px;
+}
+
+p.line{
+	margin: 0;
+}
+
+#title{
+	padding:10px 15px;
+	font-size: 25px;
+	font-weight: bolder;
+	margin: 0;
+	color: #333;
+}
+#second_row img{
+	height: 100%;
+	width: 100%;
+}
+
+#book-pic{
+	width:150px;
+}
+
+#info_background{
+	margin:0 0 0 15px;
+	width: calc(100% - 165px);
+	min-width: 250px;
+	padding:0 10px;
+}
+
+.column.card{
+	min-height: 200px;
+}
+
+.pad{
+	width: 100%;
+	padding:0px 10px;
+	max-height: 180px;
+	overflow-y:auto;
+}
+
+#base-info{
+	height: 220px;
+}
+
+@media (max-width:475px){
+	#base-info{
+		height: 440px;
+	}
+	#info_background{
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+.card>div{
+	background: white;
+	height:200px;
+}
+
+.card>div>p.line{
+	text-align: center;
+	border-bottom: 1px solid #9D9D9D;
+}
+
+table{
+	width:100% ;
+	font-size: 14px;
+	text-align: center;
+}
+
+#third_row{
+	margin: auto;
+	width: 100%;
+	padding:0 15px;
+}
+
+#third_row .content{
+	overflow-x:hidden;
+	overflow-y: auto;
+}
+
+#third_row pre{
+	width: 100%;
+	background: white;
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+
+}
+#third_row>div{
+	background: white;
+	margin-bottom:20px;
+}
+
+#third_row>div>p{
+	padding:10px;
+	margin: 0;
+}
+
+.black-item{
+	font-weight: bolder;
+}
+
+#info_background>table tr{
+	line-height: 38px;
+	color: #333;
+}
+
+.pad tr{
+	line-height:30px;
+	color: #333;
+}
+
+p{
+	line-height: 30px;
+	font-size: 20px;
+}
+
+::-webkit-scrollbar{
+    width:6px;
+    height:0px;
+}
+
+::-webkit-scrollbar-track{
+    background:#F8F8FF;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#9D9D9D;
+    border-radius:4px;
+}

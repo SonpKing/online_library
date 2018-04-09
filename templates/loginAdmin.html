@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+<title>Librarian Login</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/sonp.css">
+  <link rel="stylesheet" href="../static/css/login.css">
+
+  <script src="../static/js/jquery-3.2.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/sonp.js"></script>
+  <script src="../static/js/cookie.js"></script>
+  <script src="../static/js/loginAdmin.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+  <div class="form-signin">
+    <div class="header">
+      <div class="text-center">
+        <a href="http://47.95.205.76/">
+          <img src="../static/img/icon.png">
+        </a>
+      </div>
+      <p class="form-signin-heading">Login to your account</p>
+    </div>
+    <form>
+      <div class="login-wrap">
+        <input type="text" class="form-control" placeholder="User ID" autofocus="autofocus" maxlength="16">
+        <input type="password" class="form-control" placeholder="Password" maxlength="16">
+        <label class="checkbox">
+            <span class="pull-right"> <a href="login">Login as a reader?</a></span>
+        </label>
+        <button class="btn btn-lg btn-block btn-loginAdmin" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  <div class="sdialog" id="mySdialog">
+    <div class="sdialog-body">
+      <div class="sdialog-content"></div>
+    </div>
+    <div class="sdialog-footer">
+      <button type="button" class="btn-dialog">Confirm</button>
+    </div>
+  </div>
+</body>
+
+</html>

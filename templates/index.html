@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Index</title>
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../static/css/index.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../static/js/cookie.js"></script>
+	<script type="text/javascript" src="../static/js/index.js"></script>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+</head>
+
+<body>
+	<div id="nav">
+		<ul class="nav navbar-nav navbar-left">
+			<li id="bell-icon">
+				<img src="../static/img/notice.png">
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li id="signin">
+				<a href="login">
+					<img src="../static/img/login.png">
+				</a>
+			</li>
+			<li id="user" style="display: none;">
+				<a href="userIndex">
+					<span id="user-id">Lujie</span>
+				</a>
+			</li>
+			<li id="signout" style="display: none;">
+				<a href="#">
+					<img src="../static/img/logout.png">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div id="library">
+		<img src="../static/img/icon_bigger.png" />
+	</div>
+
+	<div id="div_select">
+		<form action="sss" method="GET">
+			<select class="form-control" name="type">
+				<option value="0">Keyword</option>
+				<option value="1">Book</option>
+				<option value="2">Author</option>
+				<option value="3">ISBN</option>
+			</select>
+			<input type="text" class="form-control" name="search" id="search_text" placeholder="Enter Key Word" onkeyup="value=value.replace(/[^a-zA-Z0-9\u4e00-\u9fa5' ']/ig,'')"
+			 maxlength="40">
+			<span id="search-btn" style="cursor: pointer"></span>
+		</form>
+	</div>
+</body>
+
+</html>

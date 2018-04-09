@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Book Info</title>
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="../static/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/cookie.js"></script>
+	<link href="../static/css/bookInfo.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/bookInfo.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 column">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="http://47.95.205.76">
+							<img src="../static/img/icon.png">
+						</a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<form class="navbar-form navbar-left" role="search" action="{{url_for('sss')}}" method="GET">
+							<div class="form-group">
+								<input type="text" name="type" value="0" style="display: none;">
+								<input type="text" class="form-control" id="searchbox" placeholder="Book/Author/ISBN" name="search">
+							</div>
+							<button id="search_btn" class="btn btn-default" type="submit">Search</button>
+						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li id="signin" style="display:none;">
+								<a href="login">
+									<img src="../static/img/login.png">
+								</a>
+							</li>
+							<li class="dropdown" id="user" style="margin-top: 0px;">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<span id="username">Lujie</span>
+									<strong class="caret"></strong>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="userIndex">My Home</a>
+									</li>
+									<li>
+										<a href="userInfo">My Profile</a>
+									</li>
+									<li>
+										<a id="signout">Sign Out</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div id="bg_img">
+			<p id="title"></p>
+			<div id="second_row" class="row">
+				<div id="base-info" class="col-md-8 column card">
+					<div id="book-pic" class="pull-left">
+						<img id="picture" />
+					</div>
+					<div id="info_background" class="pull-left">
+						<table >
+							<!-- <tr id="subtitle_tr" style="display:none">
+								<td style="width:25%">Subtitle:</td>
+								<td id="subtitle_td" style="width:75%"></td>
+							</tr> -->
+							<!-- <tr id="original_title_tr" style="display:none">
+								<td>Original Title:</td>
+								<td id="original_title_td"></td>
+							</tr> -->
+							<tr id="author_tr" style="display:none">
+								<td>Author: </td>
+								<td id="author_td" class="black-item"></td>
+							</tr>
+							<!-- <tr id="translator_tr" style="display:none">
+								<td>Translator:</td>
+								<td id="translator_td"></td>
+							</tr> -->
+							<tr id="publish_tr" style="display:none">
+								<td>Publisher:</td>
+								<td id="publish_td" class="black-item"></td>
+							</tr>
+							<tr id="pubdate_tr" style="display:none">
+								<td>PublishDate:</td>
+								<td id="pubdate_td" class="black-item"></td>
+							</tr>
+							<tr id="price_tr" style="display:none">
+								<td>Price:</td>
+								<td id="price_td" class="black-item"></td>
+							</tr>
+							<!-- <tr id="page_tr" style="display:none">
+								<td>Pages:</td>
+								<td id="page_td"></td>
+							</tr> -->
+							<tr id="ISBN_tr" style="display:none">
+								<td>ISBN:</td>
+								<td id="ISBN_td" class="black-item"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-4 column card">
+					<div>
+						<p class="line">Library Information</p>
+						<div class="pad">
+							<table>
+								<thead>
+									<tr>
+										<td>Location</td>
+										<td>Quantity</td>
+									</tr>
+								</thead>
+								<tbody id="libInfo">
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="col-md-3 column card">
+					<div>
+						<p class="line">Label</p>
+						<div class="pad">
+							<p id="label_text"></p>
+						</div>
+					</div>
+				</div> -->
+			</div>
+
+			<div id="third_row">
+				<div>
+					<p>Context Introduction</p>
+					<div class="content">
+						<pre id="context_introduction"></pre>
+					</div>
+				</div>
+
+				<div>
+					<p>Author Introduction</p>
+					<div class="content">
+						<pre id="author_introduction"></pre>
+					</div>
+				</div>
+
+				<div>
+					<p>Catalogue</p>
+					<div class="content">
+						<pre id="catalogue_information"></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

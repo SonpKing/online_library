@@ -1,0 +1,71 @@
+#income_records_detail
+{
+    width:80%;
+    min-width: 600px;
+}
+
+
+#JmChartContent button
+{
+    margin-top:0px;
+}
+
+#JmChartContent
+{
+    height: 30px;
+    width: auto;
+    display: inline-block;
+    margin: 15px auto;
+}
+
+#JMSelect{
+    width: 100px;
+    float: left;
+}
+
+#JMchartFrom
+{
+    width: 160px;
+    margin-left: 10px;
+    float: left;
+}
+
+#JMcahrtBtn
+{
+    width: 120px;
+    margin-left: 10px;
+    float: left;
+}
+
+#JMrow
+{
+    margin-bottom: 15px;
+}
+
+#pieChart
+{
+    display:bolck;
+    margin-bottom: 10px;
+    min-height: 245px;
+}
+
+#tableCaption
+{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+#chartTable
+{
+    display:bolck;
+    margin:0 auto;
+    margin-bottom: 10px;
+}
+
+#linerChart
+{
+    border-top: 1px dashed rgba(153, 153, 153, 0.829);
+    display:bolck;
+    margin-bottom: 30px;;
+}

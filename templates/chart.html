@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>chart</title>
+
+	<script src="../static/js/SonpJquery.min.js"></script>
+	<script src="../static/js/SonpBootstrap.min.js"></script>
+
+    <link href="../static/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="../static/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../static/js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+
+    <script src="../static/js/Chart.min.js"></script>
+
+    <link rel="stylesheet" href="../static/css/bootstrap-select.min.css">
+    <script type="text/javascript" src="../static/js/bootstrap-select.min.js"></script>
+
+    <script src="../static/js/cookie.js"></script>
+    <script type="text/javascript" src="../static/js/chart.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/chart.css">
+
+
+</head>
+
+<body>
+    <div id="header" class="row clearfix">
+        <div class="col-md-12 column">
+            <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
+                <div class="navbar-header">
+                     <a class="navbar-left" href="http://47.95.205.76"><img src="../static/img/icon.png" style="height: 2em; margin-top: 1.1em;margin-left: 2em;"></a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id='right_nav' class="nav navbar-nav navbar-right">
+                        <li id="userid">
+                            <a href="#">
+                                <span id="user_id"></span>
+                            </a>
+                        </li>	
+                        <li id="signout">
+                            <a href="#">
+                                <img src="../static/img/logout.png" style="height: 2em;">
+                                <span style="margin-left: 0.5em;">Sign Out</span>
+                            </a>	
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id ="chartTitle">
+        Expenses and Receipts
+    </div>
+
+    <div id ="ChartContent">
+
+        <div id = "chartSelectGruop" class="select-group">
+            <div>
+                <select id="ShowType" name="ShowType" class="selectpicker show-tick form-control" data-live-search="false" onchange="selectOnchang(this)">
+                    <option value="0">Day</option>
+                    <option value="1">Month</option>
+                    <option value="2">Year</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div  id = "chartInputGroup" class="form-group">
+            <div class="input-group date form_date" data-date="" data-date-format="yyyy-MM-dd">
+                <input id="chartDatetimepicker" class="form-control" size="16" type="text" value="" readonly>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+
+            </div>
+
+        </div>
+
+        <div id ="chartBtn">
+            <button type="button" class="btn btn-info" onclick="getData(this)">Show Chart</button>
+        </div>
+
+    </div>
+
+
+
+    <div id="pieChart" class="col-md-8 col-md-offset-2">
+        <canvas id="pie"></canvas>
+    </div>
+
+    <div id="chartTable" class="col-md-8 col-md-offset-2" style="display:none">
+        <table class="table table-hover table-responsive table-condensed table-striped">
+            <caption id = "tableCaption" style="text-align: center">Details</caption>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Due</td>
+                    <td id="tableDue"></td>
+                </tr>
+
+                <tr>
+                    <td>Damage</td>
+                    <td id="tableDamage"></td>
+                </tr>
+
+                <tr>
+                    <td>Lost</td>
+                    <td id="tableLost"></td>
+                </tr>
+
+                <tr>
+                    <td>Deposit</td>
+                    <td id="tableDeposit"></td>
+                </tr>
+
+                <tr>
+                    <td>Return Deposit</td>
+                    <td id="tableReturnDeposit"></td>
+                </tr>
+
+                <tr>
+                    <td>Total</td>
+                    <td id="tableTotal"></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div id="linerChart" class="col-md-8 col-md-offset-2">
+        <canvas id="liner"></canvas>
+    </div>
+
+</body>
+
+</html>
